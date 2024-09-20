@@ -7,7 +7,7 @@ $containerFooter = !empty($containerNav) ? $containerNav : 'container-fluid';
   <div class="{{ $containerFooter }}">
     <div class="footer-container d-flex align-items-center justify-content-end py-4 flex-md-row flex-column">
       <div class="text-body">
-        © <script>document.write(new Date().getFullYear())</script>, Solution By <a href="{{ (!empty(config('variables.creatorUrl')) ? config('variables.creatorUrl') : '') }}" target="_blank" class="footer-link">{{ (!empty(config('variables.creatorName')) ? config('variables.creatorName') : '') }}</a>
+        © <script>document.write(new Date().getFullYear())</script>, Project By <a href="{{ (!empty(config('variables.creatorUrl')) ? config('variables.creatorUrl') : '') }}" target="_blank" class="footer-link">{{ (!empty(config('variables.creatorName')) ? config('variables.creatorName') : '') }}</a>
       </div>
       <!-- <div class="d-none d-lg-inline-block">
         <a href="{{ config('variables.licenseUrl') ? config('variables.licenseUrl') : '#' }}" class="footer-link me-4" target="_blank">License</a>

@@ -15,213 +15,56 @@
           "url": "/reports",
           "name": "Reports",
           "slug": "dashboard-analytics"
-        },
-        {
-          "url": "/arrears",
-          "name": "Arrears",
-          "slug": "dashboard-analytics"
-        },
-        {
-          "url": "/daily-collections",
-          "name": "Daily Collections",
-          "slug": "dashboard-analytics"
         }
       ]
     },
     {
-      "menuHeader": "Sales"
+      "menuHeader": "Passangers"
     },
     {
-      "name": "All Sales",
+      "name": "All Accounts",
       "icon": "menu-icon tf-icons bx bx-wallet",
-      "slug": "all-sales"
+      "slug": "all-accounts"
     },
     {
-      "name": "Hire Sales",
+      "name": "Passangers",
       "icon": "menu-icon tf-icons bx bx-time",
-      "slug": "hire-sales",
+      "slug": "passangers",
       "submenu": [
         {
-          "url": "hire-sales/all",
-          "name": "All Hire Sales",
-          "slug": "hire-sales-all"
+          "url": "passangers/all",
+          "name": "All Passangers",
+          "slug": "passangers-all"
         },
         {
-          "url": "hire-sales/add",
-          "name": "New Hire Sale",
-          "slug": "hire-sales-add"
+          "url": "passangers/trips",
+          "name": "Trips",
+          "slug": "passangers-trips"
         }
       ]
     },
     {
-      "name": "Cash Sales",
-      "icon": "menu-icon tf-icons bx bx-money",
-      "slug": "cash-sales",
-      "submenu": [
-        {
-          "url": "cash-sales/all",
-          "name": "All Cash Sales",
-          "slug": "cash-sales-all"
-        },
-        {
-          "url": "cash-sales/add",
-          "name": "New Cash Sale",
-          "slug": "cash-sales-add"
-        }
-      ]
+      "menuHeader": "Drivers"
     },
     {
-      "name": "Collections",
-      "icon": "menu-icon tf-icons bx bx-checkbox-checked",
-      "slug": "collections",
-      "submenu": [
-        {
-          "url": "collections/all",
-          "name": "All Collections",
-          "slug": "collections-all"
-        },
-        {
-          "url": "collections/add",
-          "name": "New Collection",
-          "slug": "collections-add"
-        }
-      ]
+      "name": "All Accounts",
+      "icon": "menu-icon tf-icons bx bx-wallet",
+      "slug": "all-accounts"
     },
     {
-      "name": "Invoices",
-      "icon": "menu-icon tf-icons bx bx-notepad",
-      "slug": "invoices",
-      "submenu": [
-        {
-          "url": "invoices/all",
-          "name": "All Invoices",
-          "slug": "invoices-all"
-        }
-      ]
-    },
-    {
-      "menuHeader": "Inventory"
-    },
-    {
-      "name": "Products",
+      "name": "Drivers",
       "icon": "menu-icon tf-icons bx bx-box",
-      "slug": "products",
+      "slug": "drivers",
       "submenu": [
         {
-          "url": "products/all",
-          "name": "All Product",
-          "slug": "products-all"
+          "url": "drivers/all",
+          "name": "All Drivers",
+          "slug": "drivers-all"
         },
         {
-          "url": "products/add",
-          "name": "Add Product",
-          "slug": "products-add"
-        }
-      ]
-    },
-    {
-      "name": "Attributes",
-      "icon": "menu-icon tf-icons bx bx-box",
-      "slug": "attributes",
-      "submenu": [
-        {
-          "url": "attributes/brands",
-          "name": "Brands",
-          "slug": "attributes-brands"
-        },
-        {
-          "url": "attributes/categories",
-          "name": "Categories",
-          "slug": "attributes-categories"
-        },
-        {
-          "url": "attributes/discounts",
-          "name": "Discounts",
-          "slug": "attributes-discounts"
-        },
-        {
-          "url": "attributes/warrenty",
-          "name": "Warrenty",
-          "slug": "attributes-warrenty"
-        }
-      ]
-    },
-    {
-      "menuHeader": "Customers"
-    },
-    {
-      "name": "Customers",
-      "icon": "menu-icon tf-icons bx bx-group",
-      "slug": "customers",
-      "submenu": [
-        {
-          "url": "customers/all",
-          "name": "All Customers",
-          "slug": "customers-all"
-        },
-        {
-          "url": "customers/add",
-          "name": "New Customer",
-          "slug": "customers-add"
-        },
-        {
-          "url": "customers/guarantors",
-          "name": "Guarantors",
-          "slug": "customers-guarantors"
-        }
-      ]
-    },
-    {
-      "menuHeader": "Accounting"
-    },
-    {
-      "name": "Cashbook",
-      "icon": "menu-icon tf-icons bx bx-book-alt",
-      "slug": "cashbook",
-      "submenu": [
-        {
-          "url": "cashbook/all",
-          "name": "All Cashbooks",
-          "slug": "cashbook-all"
-        },
-        {
-          "url": "cashbook/add",
-          "name": "New Cashbook",
-          "slug": "cashbook-add"
-        }
-      ]
-    },
-    {
-      "name": "Accounts",
-      "icon": "menu-icon tf-icons bx bx-book-content",
-      "slug": "accounts",
-      "submenu": [
-        {
-          "url": "accounts/all",
-          "name": "All Accounts",
-          "slug": "accounts-all"
-        },
-        {
-          "url": "accounts/add",
-          "name": "New Account",
-          "slug": "accounts-add"
-        }
-      ]
-    },
-    {
-      "name": "Transactions",
-      "icon": "menu-icon tf-icons bx bx-transfer-alt",
-      "slug": "transactions",
-      "submenu": [
-        {
-          "url": "transactions/all",
-          "name": "All Transactions",
-          "slug": "transactions-all"
-        },
-        {
-          "url": "transactions/add",
-          "name": "New Transaction",
-          "slug": "transactions-add"
+          "url": "drivers/verhicles",
+          "name": "Vehicles",
+          "slug": "drivers-vehicles"
         }
       ]
     },

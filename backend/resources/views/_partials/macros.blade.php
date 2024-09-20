@@ -1,6 +1,6 @@
 @php
 $width = $width ?? '25';
-$withbg = $withbg ?? '#696cff';
+$withbg = $withbg ?? '#E6B300';
 @endphp
 <!-- <svg width="{{ $width }}" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -34,3 +34,5 @@ $withbg = $withbg ?? '#696cff';
     </g>
   </g>
 </svg> -->
+
+<img src="{{asset('assets/img/elements/city_taxi_logo.png')}}" alt="" width="200">

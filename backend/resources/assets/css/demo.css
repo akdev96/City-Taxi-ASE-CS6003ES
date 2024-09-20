@@ -16,6 +16,7 @@
 .app-brand-text.demo {
   font-size: 1.25rem;
   letter-spacing: -0.5px;
+  display: none;
 }
 
 /* ! For .layout-navbar-fixed added fix padding top to .layout-page */

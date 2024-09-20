@@ -1,8 +1,8 @@
 <?php
   // Variables
   return [
-    "creatorName" => "Nexile Co.",
-    "creatorUrl" => "https://nexile.co",
+    "creatorName" => "LMU ESoft ASE Group | 2024 | Venushka, Akila, Nawwar, Sheleena",
+    "creatorUrl" => "",
     "templateName" => "City Taxi",
     "templateSuffix" => "Bootstrap Dashboard FREE",
     "templateVersion" => "2.0.0",

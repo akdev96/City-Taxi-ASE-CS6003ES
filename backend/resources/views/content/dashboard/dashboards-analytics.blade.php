@@ -54,9 +54,9 @@
                 </div>
               </div>
             </div>
-            <p class="mb-1">Profit</p>
-            <h4 class="card-title mb-3">Rs 12,628</h4>
-            <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +72.80%</small>
+            <p class="mb-1">Passangers</p>
+            <h4 class="card-title mb-3">Rs 0.00</h4>
+            <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +0%</small>
           </div>
         </div>
       </div>
@@ -77,9 +77,9 @@
                 </div>
               </div>
             </div>
-            <p class="mb-1">Sales</p>
-            <h4 class="card-title mb-3">Rs 4,679</h4>
-            <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +28.42%</small>
+            <p class="mb-1">Drivers</p>
+            <h4 class="card-title mb-3">Rs 0.00</h4>
+            <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +0%</small>
           </div>
         </div>
       </div>
@@ -186,9 +186,9 @@
                 </div>
               </div>
             </div>
-            <p class="mb-1">Payments</p>
-            <h4 class="card-title mb-3">Rs 2,456</h4>
-            <small class="text-danger fw-medium"><i class='bx bx-down-arrow-alt'></i> -14.82%</small>
+            <p class="mb-1">Trips/Rides</p>
+            <h4 class="card-title mb-3">Rs 0.00</h4>
+            <small class="text-danger fw-medium"><i class='bx bx-down-arrow-alt'></i> -0%</small>
           </div>
         </div>
       </div>
@@ -210,8 +210,8 @@
               </div>
             </div>
             <p class="mb-1">Transactions</p>
-            <h4 class="card-title mb-3">Rs 14,857</h4>
-            <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +28.14%</small>
+            <h4 class="card-title mb-3">Rs 0.00</h4>
+            <small class="text-success fw-medium"><i class='bx bx-up-arrow-alt'></i> +0%</small>
           </div>
         </div>
       </div>

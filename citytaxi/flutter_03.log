@@ -1,0 +1,117 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color test --machine
+
+## exception
+
+PathAccessException: PathAccessException: Cannot open file, path = '/Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/pkg/sky_engine/pubspec.yaml' (OS Error: Operation not permitted, errno = 1)
+
+```
+#0      _checkForErrorResponse (dart:io/common.dart:55:9)
+#1      _File.open.<anonymous closure> (dart:io/file_impl.dart:381:7)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+<asynchronous suspension>
+#4      _File.readAsBytes.<anonymous closure> (dart:io/file_impl.dart:562:24)
+<asynchronous suspension>
+#5      _File.readAsString (dart:io/file_impl.dart:621:18)
+<asynchronous suspension>
+#6      _pluginFromPackage (package:flutter_tools/src/flutter_plugins.dart:53:24)
+<asynchronous suspension>
+#7      findPlugins (package:flutter_tools/src/flutter_plugins.dart:96:28)
+<asynchronous suspension>
+#8      refreshPluginsList (package:flutter_tools/src/flutter_plugins.dart:1009:32)
+<asynchronous suspension>
+#9      FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:379:5)
+<asynchronous suspension>
+#10     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1750:7)
+<asynchronous suspension>
+#11     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1408:27)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#13     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:420:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:364:5)
+<asynchronous suspension>
+#17     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:130:9)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#19     main (package:flutter_tools/executable.dart:93:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.24.3, on macOS 14.3.1 23D60 darwin-arm64, locale en-LK)
+    • Flutter version 3.24.3 on channel stable at /Users/madhawasaparamadu/development/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 2663184aa7 (8 days ago), 2024-09-11 16:27:48 -0500
+    • Engine revision 36335019a8
+    • Dart version 3.5.3
+    • DevTools version 2.37.3
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.3)
+    • Android SDK at /Users/madhawasaparamadu/Library/Android/sdk
+    • Platform android-33, build-tools 33.0.3
+    • Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 17.0.11+0-17.0.11b1207.24-11852314)
+    • All Android licenses accepted.
+
+[!] Xcode - develop for iOS and macOS (Xcode 15.4)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 15F31d
+    ✗ CocoaPods not installed.
+        CocoaPods is a package manager for iOS or macOS platform code.
+        Without CocoaPods, plugins will not work on iOS or macOS.
+        For more info, see https://flutter.dev/to/platform-plugins
+      For installation instructions, see https://guides.cocoapods.org/using/getting-started.html#installation
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2024.1)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.11+0-17.0.11b1207.24-11852314)
+
+[✓] Android Studio (version 2020.3)
+    • Android Studio at /Users/madhawasaparamadu/Desktop/SOFTWARES/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.10+0-b96-7249189)
+
+[✓] VS Code (version 1.93.1)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.96.0
+
+[✓] VS Code (version 1.93.1)
+    • VS Code at /Users/madhawasaparamadu/Desktop/Visual Studio Code.app/Contents
+    • Flutter extension version 3.96.0
+
+[✓] Connected device (5 available)
+    • Android SDK built for arm64 (mobile) • emulator-5556                        • android-arm64  • Android 11 (API 30) (emulator)
+    • iPhone 15 Pro (mobile)               • 4BCD769E-D242-4C5B-8258-C07C58807AEB • ios            • com.apple.CoreSimulator.SimRuntime.iOS-17-5 (simulator)
+    • macOS (desktop)                      • macos                                • darwin-arm64   • macOS 14.3.1 23D60 darwin-arm64
+    • Mac Designed for iPad (desktop)      • mac-designed-for-ipad                • darwin         • macOS 14.3.1 23D60 darwin-arm64
+    • Chrome (web)                         • chrome                               • web-javascript • Google Chrome 128.0.6613.138
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.
+```

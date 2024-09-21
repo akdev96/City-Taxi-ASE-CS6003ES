@@ -1,0 +1,1 @@
+ /Users/madhawasaparamadu/development/city-taxi-front-end/cityTaxiPvt/citytaxi1/citytaxi1/.dart_tool/flutter_build/f59f91fd54bd5f6fa4ad9b3389f6d01a/native_assets.yaml: 

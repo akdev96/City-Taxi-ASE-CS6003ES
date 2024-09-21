@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "slgs" "\0"
+            VALUE "FileDescription", "citytaxi1" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "slgs" "\0"
+            VALUE "InternalName", "citytaxi1" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "slgs.exe" "\0"
-            VALUE "ProductName", "slgs" "\0"
+            VALUE "OriginalFilename", "citytaxi1.exe" "\0"
+            VALUE "ProductName", "citytaxi1" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

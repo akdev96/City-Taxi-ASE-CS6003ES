@@ -1,0 +1,14 @@
+name: city_taxi
+description: A new Flutter project for City Taxi.
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.18.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png
+    - logo2.png
+    - logo.jpg

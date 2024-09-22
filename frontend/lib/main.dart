@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart'; // Import for date formatting
+import 'package:image_picker/image_picker.dart'; //imge picker
 
 void main() {
   runApp(const MyApp());
@@ -50,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: const Color(0xFFE6B300),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -63,11 +64,11 @@ class _LoginPageState extends State<LoginPage> {
               ),
               textAlign: TextAlign.right,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Center(
               child: Image.asset('assets/logo.png', height: 80),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 1),
             Expanded(
               child: Form(
                 key: _formKey,
@@ -173,7 +174,11 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
-                        // Navigate to reset password page
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DrivingLicensePage()),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.black,
@@ -188,7 +193,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 35),
                     ElevatedButton(
                       onPressed: () {
                         // Exit the app
@@ -207,7 +212,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 40),
+                    const SizedBox(height: 20),
                     Align(
                       alignment:
                           Alignment.centerRight, // Align text to the right
@@ -216,7 +221,8 @@ class _LoginPageState extends State<LoginPage> {
                             CrossAxisAlignment.end, // Align text to the end
                         children: [
                           Text(
-                            'HotLine : 119',
+                            'HotLine : 119 \n'
+                            'For bookings',
                             style: TextStyle(
                               color: const Color(0xFFE6B300), // Highlight color
                               fontSize: 20,
@@ -230,15 +236,15 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           const SizedBox(
                               height: 1), // Space between text and underline
-                          Container(
+                          /* Container(
                             height: 3, // Thickness of the underline
                             width: 150, // Adjust width as needed
                             color: Colors.red, // Color of the underline
-                          ),
+                          ),*/
                         ],
                       ),
                     ),
-                    const SizedBox(height: 50),
+                    const SizedBox(height: 40),
                     const Text(
                       'LMU-CSE Advanced Software Eng, Group Project',
                       textAlign: TextAlign.center,
@@ -1456,17 +1462,268 @@ class _DriverBasicInfoPageState extends State<DriverBasicInfoPage> {
   }
 }
 
-// Define the DrivingLicensePage as needed
-class DrivingLicensePage extends StatelessWidget {
+class DrivingLicensePage extends StatefulWidget {
+  @override
+  _DrivingLicensePageState createState() => _DrivingLicensePageState();
+}
+
+class _DrivingLicensePageState extends State<DrivingLicensePage> {
+  final TextEditingController _fullNameController = TextEditingController();
+  final TextEditingController _licenseNumberController =
+      TextEditingController();
+  final List<Map<String, String>> _vehicleCategories = [
+    {'category': 'A1: Light motor cycles', 'image': 'assets/A1.png'},
+    {'category': 'A: Motorcycles', 'image': 'assets/A.png'},
+    {'category': 'B1: Motorcycles', 'image': 'assets/B1.png'},
+    {'category': 'B: Dual purpose light vehicle', 'image': 'assets/B.png'},
+    {'category': 'C1: Light Motor Lorry', 'image': 'assets/C1.png'},
+    {'category': 'C: Motor Lorry', 'image': 'assets/C.png'},
+    {'category': 'CE: Heavy Motor Lorry', 'image': 'assets/CE.png'},
+    {'category': 'D1: Light Motor Coach', 'image': 'assets/D1.png'},
+    {'category': 'D: Motor Coach', 'image': 'assets/D.png'},
+    {'category': 'DE: Heavy Motor Coach', 'image': 'assets/DE.png'},
+    {'category': 'G1: Hand Tractors', 'image': 'assets/G1.png'},
+    {'category': 'G: Land Vehicle', 'image': 'assets/G.png'},
+    {'category': 'J: Special purpose Vehicle', 'image': 'assets/J.png'},
+  ];
+  final Set<String> _selectedCategories = {};
+  final _formKey = GlobalKey<FormState>();
+
+  // Image picker variables
+  final ImagePicker _picker = ImagePicker();
+  XFile? _frontImage;
+  XFile? _backImage;
+
+  Future<void> _pickImage(bool isFrontImage) async {
+    final pickedImage = await _picker.pickImage(source: ImageSource.gallery);
+    if (pickedImage != null) {
+      setState(() {
+        if (isFrontImage) {
+          _frontImage = pickedImage;
+        } else {
+          _backImage = pickedImage;
+        }
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Driving License Information'),
+        title: const Text(
+          'Add Your \nDriving License Details',
+          textAlign: TextAlign.center,
+        ),
         backgroundColor: const Color(0xFFE6B300),
       ),
-      body: Center(
-        child: const Text('Driving License Page Content'),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Image.asset(
+                    'assets/logo.png', // Path to your logo
+                    height: 100,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _fullNameController,
+                  decoration: const InputDecoration(
+                    labelText: 'Full Name',
+                    labelStyle: TextStyle(color: Colors.white),
+                    border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFFE6B300)),
+                    ),
+                  ),
+                  style: const TextStyle(color: Colors.white),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your full name';
+                    } else if (value.length < 3) {
+                      return 'Full name must be at least 3 characters long';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _licenseNumberController,
+                  decoration: const InputDecoration(
+                    labelText: 'License Number',
+                    labelStyle: TextStyle(color: Colors.white),
+                    border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFFE6B300)),
+                    ),
+                  ),
+                  style: const TextStyle(color: Colors.white),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your license number';
+                    } else if (value.length < 6 || value.length > 12) {
+                      return 'License number must be between 6 and 12 characters';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                const Text(
+                  'Categories of Vehicles:',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+                const SizedBox(height: 8),
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 3 / 2,
+                  ),
+                  itemCount: _vehicleCategories.length,
+                  itemBuilder: (context, index) {
+                    final category = _vehicleCategories[index];
+                    final isSelected =
+                        _selectedCategories.contains(category['category']);
+
+                    return Card(
+                      color: isSelected ? Colors.yellow : Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            if (isSelected) {
+                              _selectedCategories.remove(category['category']);
+                            } else {
+                              _selectedCategories.add(category['category']!);
+                            }
+                          });
+                        },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              category['image']!,
+                              height: 50,
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              category['category']!,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: isSelected
+                                    ? FontWeight.bold
+                                    : FontWeight.normal,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                const SizedBox(height: 16),
+                const Text(
+                  'Upload License Images:',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () => _pickImage(true),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFFE6B300),
+                          minimumSize: const Size(double.infinity, 50),
+                        ),
+                        child: Text(
+                          _frontImage == null
+                              ? 'Upload Front Image'
+                              : 'Front Image Selected',
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () => _pickImage(false),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFFE6B300),
+                          minimumSize: const Size(double.infinity, 50),
+                        ),
+                        child: Text(
+                          _backImage == null
+                              ? 'Upload Back Image'
+                              : 'Back Image Selected',
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      if (_formKey.currentState?.validate() ?? false) {
+                        if (_selectedCategories.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                  'Please select at least one vehicle category.'),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
+                        } else if (_frontImage == null || _backImage == null) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                  'Please upload both front and back images.'),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
+                        } else {
+                          // Handle form submission
+                          // You can add your submission logic here
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content:
+                                  Text('Driving license details submitted!'),
+                              backgroundColor: Colors.green,
+                            ),
+                          );
+                        }
+                      }
+                    },
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      backgroundColor: const Color(0xFFE6B300),
+                      minimumSize: const Size(double.infinity, 50),
+                    ),
+                    child: const Text(
+                      'Submit',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

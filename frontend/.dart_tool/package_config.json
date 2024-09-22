@@ -62,6 +62,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/intl-0.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/leak_tracker-10.0.5",
       "packageUri": "lib/",
@@ -164,13 +170,13 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "slgs",
+      "name": "citytaxi1",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-09-21T08:36:20.950087Z",
+  "generated": "2024-09-22T03:29:14.525645Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter",

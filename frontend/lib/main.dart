@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'City Taxi Pvt',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFFE6B300)),
-        scaffoldBackgroundColor: Color.fromARGB(255, 181, 180, 180),
+        scaffoldBackgroundColor: Color.fromARGB(255, 153, 153, 153),
         useMaterial3: true,
       ),
       home: LoginPage(),
@@ -65,8 +65,8 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 20),
             Center(
-                //child: Image.asset('logo.png', height: 80),
-                ),
+              child: Image.asset('assets/logo.png', height: 80),
+            ),
             const SizedBox(height: 20),
             Expanded(
               child: Form(
@@ -207,7 +207,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 40),
                     Align(
                       alignment:
                           Alignment.centerRight, // Align text to the right
@@ -238,7 +238,7 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 70),
+                    const SizedBox(height: 50),
                     const Text(
                       'LMU-CSE Advanced Software Eng, Group Project',
                       textAlign: TextAlign.center,
@@ -294,6 +294,10 @@ class RegisterPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),
+            ),
+            const SizedBox(height: 20),
+            Center(
+              child: Image.asset('assets/logo.png', height: 50),
             ),
             const SizedBox(height: 20),
             const Text(
@@ -451,7 +455,8 @@ class RegisterPage extends StatelessWidget {
                                 //nasviogsate to driver regisor
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => DriverRegisterPage()),
+                                    builder: (context) =>
+                                        DriverBasicInfoPage()),
                               );
                             },
                             style: ElevatedButton.styleFrom(
@@ -506,8 +511,8 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
   late TextEditingController _emergencyContactController;
   late TextEditingController _birthdayController;
 
-  String _gender = 'Male';
-  String _district = 'Colombo'; // Default district
+  String? _gender; //Defalult male
+  String? _district; // Default district
   bool _passwordVisible = false;
 
   @override
@@ -655,12 +660,23 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
+                const SizedBox(height: 20),
+                Center(
+                  child: Image.asset('assets/logo.png', height: 80),
+                ),
                 TextFormField(
                   controller: _firstNameController,
                   decoration: const InputDecoration(
                     labelText: 'First Name',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
+                  style: TextStyle(color: Colors.white), // Text color
                   validator: _validateName,
                 ),
                 const SizedBox(height: 16),
@@ -668,8 +684,15 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _lastNameController,
                   decoration: const InputDecoration(
                     labelText: 'Last Name',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
+                  style: TextStyle(color: Colors.white), // Text color
                   validator: _validateName,
                 ),
                 const SizedBox(height: 16),
@@ -677,21 +700,33 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _nicController,
                   decoration: const InputDecoration(
                     labelText: 'NIC',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
-                  validator: _validateNIC,
+                  style: TextStyle(color: Colors.white), // Text color
+                  validator: _validateName,
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
                   controller: _passwordController,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    border: OutlineInputBorder(),
+                    labelStyle: const TextStyle(color: Colors.white),
+                    border: const OutlineInputBorder(),
+                    focusedBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFFE6B300)),
+                    ),
                     suffixIcon: IconButton(
                       icon: Icon(
                         _passwordVisible
                             ? Icons.visibility
                             : Icons.visibility_off,
+                        color: Colors.white, //icon colour
                       ),
                       onPressed: () {
                         setState(() {
@@ -700,6 +735,7 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                       },
                     ),
                   ),
+                  style: const TextStyle(color: Colors.white), //pw colour
                   obscureText: !_passwordVisible,
                   validator: _validatePassword,
                 ),
@@ -708,8 +744,13 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _confirmPasswordController,
                   decoration: const InputDecoration(
                     labelText: 'Confirm Password',
+                    labelStyle: TextStyle(color: Colors.white),
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFFE6B300)),
+                    ),
                   ),
+                  style: const TextStyle(color: Colors.white),
                   obscureText: !_passwordVisible,
                   validator: (value) {
                     if (value != _passwordController.text) {
@@ -723,7 +764,13 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _emailController,
                   decoration: const InputDecoration(
                     labelText: 'Email',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
                   keyboardType: TextInputType.emailAddress,
                   validator: _validateEmail,
@@ -733,17 +780,30 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _phoneNoController,
                   decoration: const InputDecoration(
                     labelText: 'Phone Number',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
                   keyboardType: TextInputType.phone,
                   validator: _validatePhoneNo,
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
+                  //user must enter BD
                   controller: _birthdayController,
                   decoration: const InputDecoration(
                     labelText: 'Birthday (yyyy-MM-dd)',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
                   keyboardType: TextInputType.datetime,
                   validator: _validateBirthday,
@@ -754,13 +814,25 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   items: ['Male', 'Female', 'Other']
                       .map((gender) => DropdownMenuItem(
                             value: gender,
-                            child: Text(gender),
+                            child: Text(gender,
+                                style: TextStyle(
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255))), //dropdown color
                           ))
                       .toList(),
                   decoration: const InputDecoration(
                     labelText: 'Gender',
+                    labelStyle: TextStyle(color: Colors.white),
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFFE6B300)),
+                    ),
                   ),
+                  dropdownColor: Color.fromARGB(
+                      255, 0, 0, 0), // Set dropdown menu background color
+                  style: const TextStyle(
+                      color: Color.fromARGB(
+                          255, 143, 142, 142)), // Text color in the dropdown
                   onChanged: (value) {
                     setState(() {
                       _gender = value!;
@@ -772,7 +844,13 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _address1Controller,
                   decoration: const InputDecoration(
                     labelText: 'Address',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
                   validator: _validateAddress,
                 ),
@@ -781,7 +859,13 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _address2Controller,
                   decoration: const InputDecoration(
                     labelText: 'City',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
                   validator: _validateAddress,
                 ),
@@ -790,7 +874,13 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _zipController,
                   decoration: const InputDecoration(
                     labelText: 'ZIP Code',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
                   keyboardType: TextInputType.number,
                   validator: _validateZipCode,
@@ -827,13 +917,29 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   ]
                       .map((district) => DropdownMenuItem(
                             value: district,
-                            child: Text(district),
+                            child: Text(district,
+                                style: TextStyle(
+                                    color: const Color.fromARGB(
+                                        //dropdown font colour
+                                        255,
+                                        255,
+                                        255,
+                                        255))),
                           ))
                       .toList(),
                   decoration: const InputDecoration(
                     labelText: 'District',
+                    labelStyle: TextStyle(color: Colors.white),
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color(0xFFE6B300)),
+                    ),
                   ),
+                  dropdownColor: Color.fromARGB(
+                      255, 0, 0, 0), // Set dropdown menu background color
+                  style: const TextStyle(
+                      color: Color.fromARGB(
+                          255, 143, 142, 142)), // Text color in the dropdown
                   onChanged: (value) {
                     setState(() {
                       _district = value!;
@@ -845,7 +951,13 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
                   controller: _emergencyContactController,
                   decoration: const InputDecoration(
                     labelText: 'Emergency Contact',
+                    labelStyle:
+                        TextStyle(color: Colors.white), // Label text color
                     border: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xFFE6B300)), // Border color on focus
+                    ),
                   ),
                   keyboardType: TextInputType.phone,
                   validator: _validatePhoneNo,
@@ -876,16 +988,485 @@ class _PassengerRegisterPageState extends State<PassengerRegisterPage> {
   }
 }
 
-class DriverRegisterPage extends StatelessWidget {
+class DriverBasicInfoPage extends StatefulWidget {
+  @override
+  _DriverBasicInfoPageState createState() => _DriverBasicInfoPageState();
+}
+
+class _DriverBasicInfoPageState extends State<DriverBasicInfoPage> {
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController _firstNameController = TextEditingController();
+  final TextEditingController _lastNameController = TextEditingController();
+  final TextEditingController _nicController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _phoneNoController = TextEditingController();
+  final TextEditingController _address1Controller = TextEditingController();
+  final TextEditingController _cityController = TextEditingController();
+  final TextEditingController _zipController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
+
+  bool _passwordVisible = false;
+  DateTime? _selectedDate;
+  int? _age;
+  String? _district;
+  String _gender = 'Male'; //defalut male, most drivers are male
+
+  @override
+  void dispose() {
+    _lastNameController.dispose();
+    _nicController.dispose();
+    _emailController.dispose();
+    _phoneNoController.dispose();
+    _address1Controller.dispose();
+    _cityController.dispose();
+    _zipController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    super.dispose();
+  }
+
+  String? _validateName(String? value) {
+    if (value == null || value.length < 3) {
+      return 'Name must be at least 3 characters long';
+    }
+    return null;
+  }
+
+  String? _validateNIC(String? value) {
+    if (value == null || (value.length != 10 && value.length != 12)) {
+      return 'NIC must be either 10 or 12 characters long';
+    }
+    if (value.length == 10) {
+      if (!RegExp(r'^\d{9}[VX]$').hasMatch(value)) {
+        return 'NIC must be 9 digits followed by V or X';
+      }
+    } else if (value.length == 12) {
+      if (!RegExp(r'^\d{12}$').hasMatch(value)) {
+        return 'NIC must be 12 digits';
+      }
+    }
+    return null;
+  }
+
+  String? _validatePassword(String? value) {
+    if (value == null || value.length < 8) {
+      return 'Password must be at least 8 characters long';
+    }
+    if (!RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$')
+        .hasMatch(value)) {
+      return 'Password must include uppercase, lowercase, and a number';
+    }
+    return null;
+  }
+
+  String? _validateEmail(String? value) {
+    if (value == null ||
+        !RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
+            .hasMatch(value)) {
+      return 'Enter a valid email address';
+    }
+    return null;
+  }
+
+  String? _validatePhoneNo(String? value) {
+    if (value == null ||
+        value.length != 10 ||
+        !RegExp(r'^\d{10}$').hasMatch(value)) {
+      return 'Phone number must be 10 digits';
+    }
+    return null;
+  }
+
+  String? _validateAddress(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter an address';
+    }
+    return null;
+  }
+
+  String? _validateZipCode(String? value) {
+    if (value == null || value.isEmpty || !RegExp(r'^\d{5}$').hasMatch(value)) {
+      return 'Enter a valid ZIP code';
+    }
+    return null;
+  }
+
+  String? _validateDistrict(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please select a district';
+    }
+    return null;
+  }
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(1950),
+      lastDate: DateTime.now(),
+    );
+    if (picked != null && picked != _selectedDate) {
+      setState(() {
+        _selectedDate = picked;
+        _age = DateTime.now().year - picked.year;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Driver Registration'),
+        title: const Text('Driver Basic Information'),
+        backgroundColor: const Color(0xFFE6B300),
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              const SizedBox(height: 20),
+              Center(
+                child: Image.asset('assets/logo.png', height: 80),
+              ),
+              TextFormField(
+                controller: _firstNameController,
+                decoration: const InputDecoration(
+                  labelText: 'First Name',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                style: TextStyle(color: Colors.white), // Text color
+                validator: _validateName,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _lastNameController,
+                decoration: const InputDecoration(
+                  labelText: 'Last Name',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                style: TextStyle(color: Colors.white), // Text color
+                validator: _validateName,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _nicController,
+                decoration: const InputDecoration(
+                  labelText: 'NIC',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                style: TextStyle(color: Colors.white), // Text color
+                validator: _validateNIC,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                //driver has to pic from dropdown
+                readOnly: true,
+                decoration: const InputDecoration(
+                  labelText: 'Birthday',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                style: TextStyle(color: Colors.white), // Text color
+                onTap: () => _selectDate(context),
+                controller: TextEditingController(
+                  text: _selectedDate != null
+                      ? DateFormat('yyyy-MM-dd').format(_selectedDate!)
+                      : '',
+                ),
+              ),
+              const SizedBox(height: 16),
+              if (_age != null)
+                Text('Age: $_age', style: const TextStyle(fontSize: 16)),
+              const SizedBox(height: 16),
+              if (_age != null && (_age! < 25 || _age! > 55))
+                const Text(
+                  'Driver age must be between 25 and 55',
+                  style: TextStyle(color: Colors.red, fontSize: 16),
+                ),
+              const SizedBox(height: 16),
+              DropdownButtonFormField<String>(
+                value: _gender,
+                items: ['Male', 'Female', 'Other']
+                    .map((gender) => DropdownMenuItem(
+                          value: gender,
+                          child: Text(gender,
+                              style: TextStyle(
+                                  color: const Color.fromARGB(
+                                      255, 255, 255, 255))), //dropdown color
+                        ))
+                    .toList(),
+                decoration: const InputDecoration(
+                  labelText: 'Gender',
+                  labelStyle: TextStyle(color: Colors.white),
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFFE6B300)),
+                  ),
+                ),
+                dropdownColor: Color.fromARGB(
+                    255, 0, 0, 0), // Set dropdown menu background color
+                style: const TextStyle(
+                    color: Color.fromARGB(
+                        255, 143, 142, 142)), // Text color in the dropdown
+                onChanged: (value) {
+                  setState(() {
+                    _gender = value!;
+                  });
+                },
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _address1Controller,
+                decoration: const InputDecoration(
+                  labelText: 'Address',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                validator: _validateAddress,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _cityController,
+                decoration: const InputDecoration(
+                  labelText: 'City',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                validator: _validateAddress,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _zipController,
+                decoration: const InputDecoration(
+                  labelText: 'ZIP Code',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                validator: _validateZipCode,
+              ),
+              const SizedBox(height: 16),
+              DropdownButtonFormField<String>(
+                value: _district,
+                items: [
+                  'Colombo',
+                  'Gampaha',
+                  'Kalutara',
+                  'Kandy',
+                  'Matale',
+                  'Nuwara Eliya',
+                  'Galle',
+                  'Matara',
+                  'Hambantota',
+                  'Jaffna',
+                  'Kilinochchi',
+                  'Mannar',
+                  'Vavuniya',
+                  'Mullaitivu',
+                  'Batticaloa',
+                  'Ampara',
+                  'Trincomalee',
+                  'Kurunegala',
+                  'Puttalam',
+                  'Anuradhapura',
+                  'Polonnaruwa',
+                  'Badulla',
+                  'Moneragala',
+                  'Ratnapura',
+                  'Kegalle',
+                ]
+                    .map((district) => DropdownMenuItem(
+                          value: district,
+                          child: Text(district,
+                              style: TextStyle(
+                                  color: const Color.fromARGB(
+                                      //dropdown font colour
+                                      255,
+                                      255,
+                                      255,
+                                      255))),
+                        ))
+                    .toList(),
+                decoration: const InputDecoration(
+                  labelText: 'District',
+                  labelStyle: TextStyle(color: Colors.white),
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFFE6B300)),
+                  ),
+                ),
+                dropdownColor: Color.fromARGB(
+                    255, 0, 0, 0), // Set dropdown menu background color
+                style: const TextStyle(
+                    color: Color.fromARGB(
+                        255, 143, 142, 142)), // Text color in the dropdown
+                onChanged: (value) {
+                  setState(() {
+                    _district = value!;
+                  });
+                },
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _emailController,
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                validator: _validateEmail,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _phoneNoController,
+                decoration: const InputDecoration(
+                  labelText: 'Phone Number',
+                  labelStyle:
+                      TextStyle(color: Colors.white), // Label text color
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: Color(0xFFE6B300)), // Border color on focus
+                  ),
+                ),
+                validator: _validatePhoneNo,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _passwordController,
+                obscureText: !_passwordVisible,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  labelStyle: const TextStyle(color: Colors.white),
+                  border: const OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _passwordVisible
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                      color: Colors.white, //icon colour
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _passwordVisible = !_passwordVisible;
+                      });
+                    },
+                  ),
+                ),
+                style: const TextStyle(color: Colors.white), //Pw colour
+
+                validator: _validatePassword,
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _confirmPasswordController,
+                decoration: const InputDecoration(
+                  labelText: 'Confirm Password',
+                  labelStyle: TextStyle(color: Colors.white),
+                  border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFFE6B300)),
+                  ),
+                ),
+                style: const TextStyle(color: Colors.white),
+                obscureText: !_passwordVisible,
+                validator: (value) {
+                  if (value != _passwordController.text) {
+                    return 'Passwords do not match';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.black,
+                  backgroundColor: const Color(0xFFE6B300), // Text color
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10), // Rounded corners
+                  ),
+                  textStyle: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onPressed: () {
+                  if (_formKey.currentState?.validate() ?? false) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Processing Data')),
+                    );
+                    // Process the form data here
+                  }
+                },
+                child: const Text('Submit'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// Define the DrivingLicensePage as needed
+class DrivingLicensePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Driving License Information'),
         backgroundColor: const Color(0xFFE6B300),
       ),
       body: Center(
-        child: Text('Driver Registration Page'),
+        child: const Text('Driving License Page Content'),
       ),
     );
   }

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('phone_number');
             $table->string('district');
             $table->string('nic_no');
+            
             $table->rememberToken();
             $table->timestamps();
         });

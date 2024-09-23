@@ -22,7 +22,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		6ipuayQ0REDusGyrw8LeCGj18bE=
+		h4bZZlN7TIkG2QYVriunYRFZSa4=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -34,7 +34,11 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
+<<<<<<< Updated upstream:citytaxi/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources
 		UUp/J98+ZUCeYbDgfwTUj7GSWSU=
+=======
+		s/GkrYEqo9XZ0BYYSJPXG+8Cz/8=
+>>>>>>> Stashed changes:frontend/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -76,7 +80,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AwznVfAdc7mY8e4tzwSeCpfH8IQUYEtu7FbJWRGpNs0=
+			KNNn70J2As5IuWsUH1EtIAO/4Z6wk2/pLC0Rrkdq1B0=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -97,7 +101,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream:citytaxi/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources
 			l1l02hYRk4Zh0U3m2K+LcLnSQXi7uiZFWnX4x5ukwKo=
+=======
+			a5Hgn1CZ4ILqm7wijJjqsXa7En9VNVagO91wJhjTiBA=
+>>>>>>> Stashed changes:frontend/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

@@ -176,7 +176,11 @@
       "languageVersion": "3.5"
     }
   ],
+<<<<<<< Updated upstream:citytaxi/.dart_tool/package_config.json
   "generated": "2024-09-19T23:08:37.863408Z",
+=======
+  "generated": "2024-09-23T16:27:05.279702Z",
+>>>>>>> Stashed changes:frontend/.dart_tool/package_config.json
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter",

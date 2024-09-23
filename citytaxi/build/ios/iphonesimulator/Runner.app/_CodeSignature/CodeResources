@@ -46,7 +46,11 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
+<<<<<<< Updated upstream:citytaxi/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 		aauPmCmO9dnV3Zk2BpwXCfwf+pA=
+=======
+		Io2irFgR2cRtvpQd6glGhAcXL/o=
+>>>>>>> Stashed changes:frontend/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +58,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
+<<<<<<< Updated upstream:citytaxi/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 		XfbIxZEi/q4O7v8HRVuc7U7aYDg=
+=======
+		0+DaRHq3XVQsSQGg6YwHh/WZ1r0=
+>>>>>>> Stashed changes:frontend/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -70,7 +78,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		6ipuayQ0REDusGyrw8LeCGj18bE=
+		h4bZZlN7TIkG2QYVriunYRFZSa4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -82,7 +90,11 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
+<<<<<<< Updated upstream:citytaxi/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 		UUp/J98+ZUCeYbDgfwTUj7GSWSU=
+=======
+		s/GkrYEqo9XZ0BYYSJPXG+8Cz/8=
+>>>>>>> Stashed changes:frontend/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -184,6 +196,26 @@
 		<data>
 		ipm8hg7aB3LzsfShJfpNR0QQ4hw=
 		</data>
+		<key>Frameworks/image_picker_ios.framework/Info.plist</key>
+		<data>
+		3uVA4FtXqS+j10SEKfnOys0p/II=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/_CodeSignature/CodeResources</key>
+		<data>
+		1kXmmhFQYg2cCvOHWrP3OT7atkA=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios</key>
+		<data>
+		nphCcoEMoipjXC/oDJXVYKwOolM=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle/Info.plist</key>
+		<data>
+		xxH/qUsRc1ZxMi42QmO88kYL4IE=
+		</data>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		/LX0ZlwxwIAIhjZaDB8EiH5KpXA=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		i7BbUucaq2GRjpef+EwbXpRd34o=
@@ -269,7 +301,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream:citytaxi/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 			FLLDPTXbdvCjolKxZHJ4IsooOgekSfJQT7m89aDKJXs=
+=======
+			WkfDbzVXpu1fH/Gt/95ll/czv7bS/7qP2WG5oFVT31Q=
+>>>>>>> Stashed changes:frontend/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -283,7 +319,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream:citytaxi/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 			sXbAXs+O+qnZnX15PFPBDIHwMrz6RiIW8dCZMnTeHS0=
+=======
+			3KlVv6onYE5snWnT+q9BXBmyTIWYYW4zr5tJQ+0y+mk=
+>>>>>>> Stashed changes:frontend/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -311,7 +351,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AwznVfAdc7mY8e4tzwSeCpfH8IQUYEtu7FbJWRGpNs0=
+			KNNn70J2As5IuWsUH1EtIAO/4Z6wk2/pLC0Rrkdq1B0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -332,7 +372,11 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream:citytaxi/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 			l1l02hYRk4Zh0U3m2K+LcLnSQXi7uiZFWnX4x5ukwKo=
+=======
+			a5Hgn1CZ4ILqm7wijJjqsXa7En9VNVagO91wJhjTiBA=
+>>>>>>> Stashed changes:frontend/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -508,6 +552,41 @@
 			<key>hash2</key>
 			<data>
 			wSU3Ai74GJkae/7UGnbY1q6WL/vA5lEax2Kl0IRef3w=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6RFvxlRJN2EKzqxYnaIi7kMjVmVB62umFaGbR87/jxA=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LrGKmGsK9lQGj6jGBIzRDSzErxI9YWw/e6FnsJpwavM=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			o8DlsyOJGOWII1lLW/BFvnEOluo1yWtOpCUU+SFvL4U=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cPDL5UBWFXpgVsYZhsdf7AfOVdkNgIOw+6E0olHxTSQ=
+			</data>
+		</dict>
+		<key>Frameworks/image_picker_ios.framework/image_picker_ios_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bS2g2NkwIn1CjB2TY7CtbjoS4sm2jFzilxWKdBL8jDE=
 			</data>
 		</dict>
 	</dict>

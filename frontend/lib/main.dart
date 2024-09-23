@@ -1695,13 +1695,20 @@ class _DrivingLicensePageState extends State<DrivingLicensePage> {
                           );
                         } else {
                           // Handle form submission
-                          // You can add your submission logic here
+                          // Add your submission logic here
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                               content:
                                   Text('Driving license details submitted!'),
                               backgroundColor: Colors.green,
                             ),
+                          );
+
+                          // Navigate to BankDetailsPage after successful submission
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BankAccountDetailsPage()),
                           );
                         }
                       }
@@ -1722,6 +1729,243 @@ class _DrivingLicensePageState extends State<DrivingLicensePage> {
                 ),
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class BankAccountDetailsPage extends StatefulWidget {
+  @override
+  _BankAccountDetailsPageState createState() => _BankAccountDetailsPageState();
+}
+
+class _BankAccountDetailsPageState extends State<BankAccountDetailsPage> {
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController _accountNameController = TextEditingController();
+  final TextEditingController _accountBranchController =
+      TextEditingController();
+  final TextEditingController _accountNumberController =
+      TextEditingController();
+
+  String? _selectedBank;
+
+  final List<String> _banks = [
+    'Bank of Ceylon',
+    'People\'s Bank',
+    'Commercial Bank of Ceylon',
+    'Hatton National Bank',
+    'Sampath Bank',
+    'National Savings Bank',
+    'Seylan Bank',
+    'Nations Trust Bank',
+    'DFCC Bank',
+    'Pan Asia Bank',
+    'Amana Bank',
+    'Union Bank',
+    'HSBC',
+    'Standard Chartered Bank',
+    'Cargills Bank',
+    'National Development Bank (NDB)',
+    'LB Finance PLC',
+    'SANASA Development Bank',
+    'Citizens Development Business Finance (CDB)',
+    'Regional Development Bank',
+    'Primary Dealer Unit (Central Bank of Sri Lanka)',
+  ];
+
+  void _sendSMSAndValidatePin() async {
+    // Logic to send SMS
+    String enteredPin = await _showPinEntryDialog(context) ?? '';
+
+    // Example PIN for validation
+    const String correctPin = '123456';
+
+    if (enteredPin == correctPin) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+              'Registration successful! You are now registered as a driver.'),
+          backgroundColor: Colors.green,
+        ),
+      );
+
+      // Navigate to the login page
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => LoginPage()),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Incorrect PIN. Please try again.'),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
+  }
+
+  Future<String?> _showPinEntryDialog(BuildContext context) async {
+    String pin = '';
+    return showDialog<String>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Enter SMS Code'),
+          content: TextField(
+            maxLength: 6,
+            keyboardType: TextInputType.number,
+            decoration: const InputDecoration(
+              hintText: 'Enter the 6-digit PIN',
+            ),
+            onChanged: (value) {
+              pin = value;
+            },
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(pin);
+              },
+              child: const Text('Submit'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _confirmRegistration() {
+    if (_formKey.currentState?.validate() ?? false) {
+      // Show snackbar and proceed to send SMS and validate the PIN
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('SMS sent! Please enter the PIN to confirm.'),
+          backgroundColor: Colors.green,
+        ),
+      );
+      _sendSMSAndValidatePin();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Bank Account Details'),
+        backgroundColor: const Color(0xFFE6B300),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Bank Name:',
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+              DropdownButtonFormField<String>(
+                value: _selectedBank,
+                items: _banks.map((String bank) {
+                  return DropdownMenuItem<String>(
+                    value: bank,
+                    child: Text(bank),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    _selectedBank = value;
+                  });
+                },
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) =>
+                    value == null ? 'Please select a bank' : null,
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Account Name:',
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+              TextFormField(
+                controller: _accountNameController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter the account name';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Account Branch:',
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+              TextFormField(
+                controller: _accountBranchController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter the account branch';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Account Number:',
+                style: TextStyle(fontSize: 18, color: Colors.black),
+              ),
+              TextFormField(
+                controller: _accountNumberController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
+                maxLength: 20,
+                keyboardType: TextInputType.number,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter the account number';
+                  } else if (value.length > 20) {
+                    return 'Account number cannot be more than 20 characters';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 16),
+              Center(
+                child: ElevatedButton(
+                  onPressed: _confirmRegistration,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.black,
+                    backgroundColor: const Color(0xFFE6B300),
+                    minimumSize: const Size(double.infinity, 50),
+                  ),
+                  child: const Text(
+                    'Submit and Validate',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

@@ -1,6 +1,9 @@
+import 'package:citytaxi1/CustomerHome.dart';
+import 'package:citytaxi1/DriverHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart'; // Import for date formatting
 import 'package:image_picker/image_picker.dart'; //imge picker
+import 
 
 void main() {
   runApp(const MyApp());
@@ -177,7 +180,9 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => DrivingLicensePage()),
+                              builder: (context) => CustomerHomePage(
+                                    customerName: '',
+                                  )),
                         );
                       },
                       style: ElevatedButton.styleFrom(
@@ -244,7 +249,7 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 40),
+                    const SizedBox(height: 20),
                     const Text(
                       'LMU-CSE Advanced Software Eng, Group Project',
                       textAlign: TextAlign.center,

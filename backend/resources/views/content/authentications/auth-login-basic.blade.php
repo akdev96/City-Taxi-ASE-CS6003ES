@@ -24,12 +24,12 @@
           </div>
           <!-- /Logo -->
           <h4 class="mb-1">Welcome to {{config('variables.templateName')}}! 👋</h4>
-          <p class="mb-6">Please sign-in to your account and start the adventure</p>
+          <p class="mb-6">Please sign-in to your Admin / Call Center Account</p>
 
           <form id="formAuthentication" class="mb-6" action="{{url('/')}}" method="GET">
             <div class="mb-6">
-              <label for="email" class="form-label">Email or Username</label>
-              <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus>
+              <label for="email" class="form-label">Email, Username or Mobile Number</label>
+              <input type="text" class="form-control" id="email" name="email-username" placeholder="you@citytaxi.lmu" autofocus>
             </div>
             <div class="mb-6 form-password-toggle">
               <label class="form-label" for="password">Password</label>
@@ -56,12 +56,13 @@
             </div>
           </form>
 
+          <!--
           <p class="text-center">
             <span>New on our platform?</span>
             <a href="{{url('auth/register-basic')}}">
               <span>Create an account</span>
             </a>
-          </p>
+          </p> -->
         </div>
       </div>
     </div>

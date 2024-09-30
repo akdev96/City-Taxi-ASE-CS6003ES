@@ -16,8 +16,9 @@ dependencies:
   google_maps_flutter: ^2.9.0 # For mobile
   google_maps_webservice: ^0.0.20-nullsafety.5 # Downgraded to a compatible version
   location: ^6.0.2
-  geolocator: ^13.0.1
+  geolocator: ^8.2.1
   url_launcher: ^6.3.0
+
 
 dev_dependencies:
   flutter_test:

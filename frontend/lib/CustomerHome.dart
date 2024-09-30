@@ -140,6 +140,14 @@ class CustomerHomePage extends StatelessWidget {
           ),
           _buildVerticalButton(
             context,
+            icon: Icons.car_repair,
+            label: 'Add Vehicle',
+            onPressed: () {
+              // Handle Add Vehicle button press
+            },
+          ),
+          _buildVerticalButton(
+            context,
             icon: Icons.person,
             label: 'Profile',
             onPressed: () {

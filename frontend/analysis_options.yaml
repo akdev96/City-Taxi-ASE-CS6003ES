@@ -1,0 +1,32 @@
+name: city_taxi
+description: A new Flutter project for City Taxi.
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.18.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png
+    - assets/logo2.png
+    - assets/logo.jpg
+    - assets/A.png
+    - assets/A1.png
+    - assets/B1.png
+    - assets/B.png
+    - assets/C.png
+    - assets/C1.png
+    - assets/CE.png
+    - assets/D.png
+    - assets/D1.png
+    - assets/DE.png
+    - assets/G.png
+    - assets/G1.png
+    - assets/J.png
+analyzer:
+  errors:
+    deprecated_member_use: ignore
+
+

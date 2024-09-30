@@ -3,8 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>LastAccessedDate</key>
-	<date>2024-09-23T16:46:04Z</date>
+	<date>2024-09-30T11:51:52Z</date>
 	<key>WorkspacePath</key>
-	<string>/Users/madhawasaparamadu/Desktop/frontend/macos/Runner.xcworkspace</string>
+	<string>/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/macos/Runner.xcworkspace</string>
 </dict>
 </plist>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Your location is needed to show the map.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>Your location is needed to show the map.</string>
+<key>io.flutter.embedded_views_preview</key>
+<true/>

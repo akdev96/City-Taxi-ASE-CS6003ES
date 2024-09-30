@@ -6,9 +6,6 @@
 	<dict>
 		<key>Headers/LocationPlugin.h</key>
 		<data>
-<<<<<<<< Updated upstream:frontend/build/macos/Build/Products/Debug/citytaxi1.app/Contents/Frameworks/file_selector_macos.framework/Versions/A/_CodeSignature/CodeResources
-		Iogw4ehwODHERMl8Ab72jVw3tpY=
-========
 		PFW/OFSwB7jVAgclwB9zK4r07Y8=
 		</data>
 		<key>Headers/location-umbrella.h</key>
@@ -22,7 +19,6 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		E2/7sRgv+lDrRmghYJk96Oea2IM=
->>>>>>>> Stashed changes:frontend/build/ios/Debug-iphonesimulator/location/location.framework/_CodeSignature/CodeResources
 		</data>
 	</dict>
 	<key>files2</key>
@@ -31,9 +27,6 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<<< Updated upstream:frontend/build/macos/Build/Products/Debug/citytaxi1.app/Contents/Frameworks/file_selector_macos.framework/Versions/A/_CodeSignature/CodeResources
-			z4/ERwNLuqvISY12nOF1HnDrDM3nC+TvQm/RTduV2KQ=
-========
 			JmzGyDqr6BsE/EzhFBLt+/Arc5OJWndz7oToXKgSNlg=
 			</data>
 		</dict>
@@ -49,7 +42,6 @@
 			<key>hash2</key>
 			<data>
 			gYBQlIC9KWEPue2GWhYDSi8av9HgtIjKTfd6RyUTo0s=
->>>>>>>> Stashed changes:frontend/build/ios/Debug-iphonesimulator/location/location.framework/_CodeSignature/CodeResources
 			</data>
 		</dict>
 	</dict>

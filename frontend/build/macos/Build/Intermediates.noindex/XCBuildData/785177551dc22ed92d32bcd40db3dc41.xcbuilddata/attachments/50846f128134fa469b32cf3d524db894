@@ -1,0 +1,28 @@
+{
+  "" : {
+    "diagnostics" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/url_launcher_macos-master.dia",
+    "emit-module-dependencies" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/url_launcher_macos-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/url_launcher_macos-master-emit-module.dia",
+    "swift-dependencies" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/url_launcher_macos-master.swiftdeps"
+  },
+  "/Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/url_launcher_macos-3.2.1/macos/url_launcher_macos/Sources/url_launcher_macos/messages.g.swift" : {
+    "const-values" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/messages.g.swiftconstvalues",
+    "dependencies" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/messages.g.d",
+    "diagnostics" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/messages.g.dia",
+    "index-unit-output-path" : "/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/messages.g.o",
+    "llvm-bc" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/messages.g.bc",
+    "object" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/messages.g.o",
+    "swift-dependencies" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/messages.g.swiftdeps",
+    "swiftmodule" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/messages.g~partial.swiftmodule"
+  },
+  "/Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/url_launcher_macos-3.2.1/macos/url_launcher_macos/Sources/url_launcher_macos/UrlLauncherPlugin.swift" : {
+    "const-values" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/UrlLauncherPlugin.swiftconstvalues",
+    "dependencies" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/UrlLauncherPlugin.d",
+    "diagnostics" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/UrlLauncherPlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/UrlLauncherPlugin.o",
+    "llvm-bc" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/UrlLauncherPlugin.bc",
+    "object" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/UrlLauncherPlugin.o",
+    "swift-dependencies" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/UrlLauncherPlugin.swiftdeps",
+    "swiftmodule" : "/Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/url_launcher_macos.build/Objects-normal/arm64/UrlLauncherPlugin~partial.swiftmodule"
+  }
+}

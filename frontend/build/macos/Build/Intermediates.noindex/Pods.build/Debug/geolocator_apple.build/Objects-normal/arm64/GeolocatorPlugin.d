@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/build/macos/Build/Intermediates.noindex/Pods.build/Debug/geolocator_apple.build/module.modulemap \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/GeolocatorPlugin.m \
+  /Users/madhawasaparamadu/Documents/GitHub/City-Taxi-ASE-CS6003ES/frontend/macos/Pods/Target\ Support\ Files/geolocator_apple/geolocator_apple-prefix.pch \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/GeolocatorPlugin.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Modules/module.modulemap \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterMacOS.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterAppDelegate.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterAppLifecycleDelegate.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterMacros.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterChannels.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterCodecs.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterDartProject.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterEngine.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterPluginRegistrarMacOS.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterPlatformViews.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterPluginMacOS.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterTexture.h \
+  /Users/madhawasaparamadu/Documents/CityTaxiPvt/citytaxipvt/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.xcframework/macos-arm64_x86_64/FlutterMacOS.framework/Headers/FlutterViewController.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/GeolocatorPlugin_Test.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Handlers/GeolocationHandler.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Handlers/LocationAccuracyHandler.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Handlers/PermissionHandler.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Constants/ErrorCodes.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Handlers/PositionStreamHandler.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Utils/ActivityTypeMapper.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Utils/AuthorizationStatusMapper.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Utils/LocationAccuracyMapper.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Utils/LocationDistanceMapper.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Utils/LocationMapper.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Utils/PermissionUtils.h \
+  /Users/madhawasaparamadu/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7/macos/Classes/Handlers/LocationServiceStreamHandler.h

@@ -1,9 +1,7 @@
-import 'package:citytaxi1/CustomerHome.dart';
 import 'package:citytaxi1/DriverHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart'; // Import for date formatting
 import 'package:image_picker/image_picker.dart'; //imge picker
-import 
 
 void main() {
   runApp(const MyApp());
@@ -180,8 +178,8 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CustomerHomePage(
-                                    customerName: '',
+                              builder: (context) => DriverHomePage(
+                                    driverName: '',
                                   )),
                         );
                       },
@@ -1439,7 +1437,7 @@ class _DriverBasicInfoPageState extends State<DriverBasicInfoPage> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.black,
-                  backgroundColor: const Color(0xFFE6B300), // Text color
+                  backgroundColor: const Color(0xFFE6B300), // Button color
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10), // Rounded corners
@@ -1454,7 +1452,15 @@ class _DriverBasicInfoPageState extends State<DriverBasicInfoPage> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Processing Data')),
                     );
-                    // Process the form data here
+
+                    // Navigate to Driving License Page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            DrivingLicensePage(), // Change here to DrivingLicensePage
+                      ),
+                    );
                   }
                 },
                 child: const Text('Submit'),
@@ -1540,7 +1546,7 @@ class _DrivingLicensePageState extends State<DrivingLicensePage> {
                 TextFormField(
                   controller: _fullNameController,
                   decoration: const InputDecoration(
-                    labelText: 'Full Name',
+                    labelText: 'Full Name Of the license',
                     labelStyle: TextStyle(color: Colors.white),
                     border: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
